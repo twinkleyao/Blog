@@ -29,7 +29,7 @@ Map is the set of key-value structure, which is similar to object. The differenc
 ###1. typeof <br>
 　　typeof is the most common method to detect data types. It can be used to identify string, number, boolean and object.<br>
 However,typeof operator has some shortcomings:<br>
-　　1.When we apply typeof to null, it returns object.<br>
+　　1.When we apply typeof to null, it returns object. If we want to use typeof to detect the type of null,the compound conditions should be satisfied:let a=null; (!a&&typeof a==="object");//true<br>
 　　2.When we detect the reference type, it can only return object. But in practical, we wish to know which type of object it is.
 typeof cannot realize this.<br>
 ###2. instanceof<br>
